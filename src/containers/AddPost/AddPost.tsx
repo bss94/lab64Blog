@@ -18,7 +18,6 @@ const AddPost = () => {
   const [isFetching, setIsFetching] = useState(false);
   const {id} = useParams();
 
-
   const fetchEditPost = useCallback(async () => {
     setIsFetching(true);
     const response = await axiosApi<ApiPost>(`/posts/${id}.json`);
@@ -33,7 +32,6 @@ const AddPost = () => {
       void fetchEditPost();
     }
   }, [id, fetchEditPost]);
-
 
   const changeField = (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
