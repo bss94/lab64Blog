@@ -13,5 +13,6 @@ export interface Post extends ApiPost{
 export interface PostMutation {
   title: string;
   body: string;
+  date:string;
 
 }

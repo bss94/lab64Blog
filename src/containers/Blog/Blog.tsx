@@ -12,7 +12,6 @@ const Blog = () => {
     const response=await axiosApi.get<ApiPosts|null>('/posts.json');
 
     const postsResponse = response.data
-    console.log(postsResponse);
     if(postsResponse!==null){
       const posts:Post[]=Object.keys(postsResponse).map((id:string)=>{
         return {
