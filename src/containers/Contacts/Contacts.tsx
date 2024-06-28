@@ -20,7 +20,6 @@ const Contacts = () => {
           id,
         };
       });
-      console.log(contacts);
       setContacts(contacts);
     } else {
       setContacts([]);
