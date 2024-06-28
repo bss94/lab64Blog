@@ -4,7 +4,7 @@ import {Container, Nav, Navbar} from 'react-bootstrap';
 
 const Toolbar = () => {
   return (
-    <Navbar bg="primary" data-bs-theme="dark" >
+    <Navbar bg="primary" data-bs-theme="dark">
       <Container>
         <NavLink className="navbar-brand" to="/">
           MyBlog

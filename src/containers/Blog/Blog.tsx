@@ -43,7 +43,9 @@ const Blog = () => {
         <h1 className="mt-3">All posts</h1>
       )}
       {isLoading && (
-        <Spinner className="mt-3" animation="border" variant="primary"/>
+        <div className="text-center">
+          <Spinner className="mt-3" animation="border" variant="primary"/>
+        </div>
       )}
       <PostList posts={posts}/>
     </>

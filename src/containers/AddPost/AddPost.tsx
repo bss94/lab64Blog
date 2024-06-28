@@ -89,7 +89,7 @@ const AddPost = () => {
     :
     (
       <>
-      <Col/>
+        <Col/>
         <Col sm={10}>
           <Form onSubmit={onFormSubmit} className="mt-3">
             <Form.Text muted><h1>{id ? 'Edit Post' : 'Create post'}</h1></Form.Text>
@@ -113,7 +113,7 @@ const AddPost = () => {
               <Form.Label>Text</Form.Label>
               <Form.Control
                 as="textarea"
-                rows={3}
+                rows={5}
                 name="body"
                 value={postMutation.body}
                 onChange={changeField}

@@ -17,7 +17,7 @@ const PostItem: React.FC<Props> = ({title, date, id}) => {
       <Card.Body>
         <Card.Subtitle className="mb-2 text-muted">created on {dateFormat(date)}</Card.Subtitle>
         <Card.Title>{title}</Card.Title>
-        <NavLink to={`/post/${id}`} className="btn btn-primary">Read more...</NavLink>
+        <NavLink to={`/post/${id}`} className="btn btn-outline-primary">Read more...</NavLink>
       </Card.Body>
     </Card>
   );

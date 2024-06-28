@@ -44,7 +44,7 @@ const FullPost = () => {
         </div>
         <div className="d-flex align-items-center justify-content-end mt-3">
           <Button className="btn-danger mx-3" onClick={deletePost}>Delete</Button>
-          <NavLink to={`/post/${id}/edit`} className="btn btn-primary">Edit.</NavLink>
+          <NavLink to={`/post/${id}/edit`} className="btn btn-primary">Edit</NavLink>
         </div>
       </>
     );
