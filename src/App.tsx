@@ -12,12 +12,12 @@ const App = () => (
     </header>
     <Container>
       <Routes>
-        <Route path='/' element={<Blog/>}/>
-        <Route path='/add-post' element={<AddPost/>}/>
-        <Route path='/post/:id/edit' element={<AddPost/>}/>
-        <Route path='/post/:id' element={<FullPost/>}/>
-        <Route path='/about' element={<div/>}/>
-        <Route path='/contacts' element={<div/>}/>
+        <Route path="/" element={<Blog/>}/>
+        <Route path="/add-post" element={<AddPost/>}/>
+        <Route path="/post/:id/edit" element={<AddPost/>}/>
+        <Route path="/post/:id" element={<FullPost/>}/>
+        <Route path="/about" element={<div/>}/>
+        <Route path="/contacts" element={<div/>}/>
         <Route path="*" element={<h1>not found</h1>}/>
 
       </Routes>

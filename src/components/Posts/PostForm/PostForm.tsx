@@ -22,7 +22,7 @@ const PostForm:React.FC<Props> = ({
     body: '',
   });
   const [isLoading,setIsLoading] = useState(false);
-  const {id} = useParams()
+  const {id} = useParams();
 
   const changeField = (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,

@@ -5,11 +5,11 @@ import axiosApi from '../../axiosApi';
 import {useNavigate, useParams} from 'react-router-dom';
 import {enqueueSnackbar} from 'notistack';
 
-const initialState={
+const initialState = {
   title: '',
   body: '',
   date: ''
-}
+};
 
 const AddPost = () => {
   const navigate = useNavigate();
@@ -50,12 +50,12 @@ const AddPost = () => {
     event.preventDefault();
     const postData = {
       ...postMutation,
-      date: postMutation.date===''?new Date():postMutation.date,
+      date: postMutation.date === '' ? new Date() : postMutation.date,
     };
     try {
-      if(id!==undefined){
+      if (id !== undefined) {
         await axiosApi.put(`/posts/${id}.json`, postData);
-      }else {
+      } else {
         await axiosApi.post('/posts.json', postData);
       }
       enqueueSnackbar('Posted', {variant: 'success'});
@@ -63,8 +63,7 @@ const AddPost = () => {
       enqueueSnackbar('Something Wrong', {variant: 'error'});
     } finally {
       setIsLoading(false);
-      setPostMutation(initialState)
-
+      setPostMutation(initialState);
     }
     navigate('/');
   };
@@ -128,7 +127,6 @@ const AddPost = () => {
             {submitBtn}
           </Button>
         </div>
-
       </Form>
     );
 };
