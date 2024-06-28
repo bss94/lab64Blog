@@ -5,6 +5,7 @@ import AddPost from './containers/AddPost/AddPost';
 import {Route, Routes} from 'react-router-dom';
 import FullPost from './components/Posts/FullPost/FullPost';
 import About from './containers/About/About';
+import Contacts from './containers/Contacts/Contacts';
 
 const App = () => (
   <>
@@ -20,7 +21,7 @@ const App = () => (
           </Route>
           <Route path="/add-post" element={<AddPost/>}/>
           <Route path="/about" element={<About/>}/>
-          <Route path="/contacts" element={<div/>}/>
+          <Route path="/contacts" element={<Contacts/>}/>
           <Route path="*" element={<h1>not found</h1>}/>
         </Routes>
       </Row>

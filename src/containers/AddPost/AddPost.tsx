@@ -1,5 +1,5 @@
 import React, {useCallback, useEffect, useState} from 'react';
-import {Button, Form, Spinner} from 'react-bootstrap';
+import {Button, Col, Form, Spinner} from 'react-bootstrap';
 import {ApiPost, PostMutation} from '../../types';
 import axiosApi from '../../axiosApi';
 import {useNavigate, useParams} from 'react-router-dom';
@@ -88,44 +88,51 @@ const AddPost = () => {
     </div>
     :
     (
-      <Form onSubmit={onFormSubmit} className="mt-3">
-        <Form.Text muted><h1>{id ? 'Edit Post' : 'Create post'}</h1></Form.Text>
+      <>
+      <Col/>
+        <Col sm={10}>
+          <Form onSubmit={onFormSubmit} className="mt-3">
+            <Form.Text muted><h1>{id ? 'Edit Post' : 'Create post'}</h1></Form.Text>
 
-        <Form.Group className="mb-3"
-                    controlId="title"
-        >
-          <Form.Label>Title</Form.Label>
-          <Form.Control
-            type="text"
-            name="title"
-            value={postMutation.title}
-            onChange={changeField}
-            required
-          />
-        </Form.Group>
-        <Form.Group
-          className="mb-3"
-          controlId="body"
-        >
-          <Form.Label>Text</Form.Label>
-          <Form.Control
-            as="textarea"
-            rows={3}
-            name="body"
-            value={postMutation.body}
-            onChange={changeField}
-            required
-          />
-        </Form.Group>
-        <div className="d-flex justify-content-end">
-          <Button variant="primary"
-                  type="submit"
-                  disabled={isLoading}
-          >
-            {submitBtn}
-          </Button>
-        </div>
-      </Form>
+            <Form.Group className="mb-3"
+                        controlId="title"
+            >
+              <Form.Label>Title</Form.Label>
+              <Form.Control
+                type="text"
+                name="title"
+                value={postMutation.title}
+                onChange={changeField}
+                required
+              />
+            </Form.Group>
+            <Form.Group
+              className="mb-3"
+              controlId="body"
+            >
+              <Form.Label>Text</Form.Label>
+              <Form.Control
+                as="textarea"
+                rows={3}
+                name="body"
+                value={postMutation.body}
+                onChange={changeField}
+                required
+              />
+            </Form.Group>
+            <div className="d-flex justify-content-end">
+              <Button variant="primary"
+                      type="submit"
+                      disabled={isLoading}
+              >
+                {submitBtn}
+              </Button>
+            </div>
+          </Form>
+        </Col>
+        <Col/>
+      </>
+
     );
 };
 

@@ -18,3 +18,11 @@ export interface PostMutation {
   date: string;
 
 }
+
+export interface ApiAbout {
+  title: string;
+  textBody: string;
+  subtitle: string;
+  period:number;
+  aboutProject:string;
+}
